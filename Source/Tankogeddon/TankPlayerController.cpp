@@ -16,6 +16,7 @@ void ATankPlayerController::SetupInputComponent()
     Super::SetupInputComponent();
 
     InputComponent->BindAxis("MoveForward", this, &ATankPlayerController::MoveForward);
+    InputComponent->BindAxis("MoveRight", this, &ATankPlayerController::MoveRight);
 }
 
 void ATankPlayerController::MoveForward(float AxisValue)
@@ -24,4 +25,9 @@ void ATankPlayerController::MoveForward(float AxisValue)
     {
         TankPawn->MoveForward(AxisValue);
     }
+}
+
+void ATankPlayerController::MoveRight(float AxisValue)
+{
+    UE_LOG(LogTemp, Log, TEXT("MoveRight"));
 }
