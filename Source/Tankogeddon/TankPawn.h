@@ -45,6 +45,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void MoveForward(float InAxisValue);
 
+    UFUNCTION(BlueprintCallable, Category = "Movement")
+    void MoveRight(float InAxisValue);
+
 private:
 	float CurrentMoveForwardAxis = 0.f;
+	float CurrentMoveRightAxis = 0.f;
 };

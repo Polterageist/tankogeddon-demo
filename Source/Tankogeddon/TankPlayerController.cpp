@@ -29,5 +29,8 @@ void ATankPlayerController::MoveForward(float AxisValue)
 
 void ATankPlayerController::MoveRight(float AxisValue)
 {
-    UE_LOG(LogTemp, Log, TEXT("MoveRight"));
+    if (TankPawn)
+    {
+        TankPawn->MoveRight(AxisValue);
+    }
 }
