@@ -20,6 +20,7 @@ public:
 
 private:
 	void MoveForward(float AxisValue);
+	void RotateRight(float AxisValue);
 
 private:
 	UPROPERTY()
